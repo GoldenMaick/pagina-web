@@ -86,3 +86,36 @@ async function obtenerDivisa() {
     }
 }
 
+
+
+function validarFormulario() {
+    let nombres = document.getElementById('nombres').value;
+    let apellidos = document.getElementById('apellidos').value;
+    let correo = document.getElementById('correo').value;
+    let password = document.getElementById('password').value;
+
+    // Expresiones regulares para validar correo y contraseña
+    let validarEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    let validarPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
+
+    // Validación de campos
+    if (nombres.trim() === '') {
+        alert("Por favor ingrese su nombre.");
+        return false;
+    }
+    if (apellidos.trim() === '') {
+        alert("Por favor ingrese su apellido.");
+        return false;
+    }
+    if (correo.trim() === '' || !validarEmail.test(correo)) {
+        alert("Por favor ingrese un correo válido.");
+        return false;
+    }
+    if (password.trim() === '' || !validarPassword.test(password)) {
+        alert("Por favor ingrese una contraseña válida. La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, una minúscula, una mayúscula y un caracter no alfanumérico.");
+        return false;
+    }
+else window.location='index.html'
+    alert("¡Formulario enviado con éxito!");
+    return true;
+}
