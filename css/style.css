@@ -215,13 +215,14 @@ text-align: center;
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: rgb(100, 100, 100);
+  background: rgb(255, 255, 255);
+  color:#ccc
 }
 
 .pago form{
   padding:20px;
   width:700px;
-  background: #fff;
+  background:#222c3a ;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
 }
 
@@ -237,7 +238,7 @@ text-align: center;
 
 .pago form .row .col .title{
   font-size: 20px;
-  color:#333;
+  color:#ffffff;
   padding-bottom: 5px;
   text-transform: uppercase;
 }
@@ -282,8 +283,8 @@ text-align: center;
   width: 100%;
   padding:12px;
   font-size: 17px;
-  background: #27ae60;
-  color:#fff;
+  background: #1f8d4d;
+  color:#ffffff;
   margin-top: 5px;
   cursor: pointer;
 }
@@ -295,4 +296,8 @@ text-align: center;
 .color{
 color: #000;
 
+}
+
+.card-group .card .dropdown-item{
+  size: 100%;
 }
